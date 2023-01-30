@@ -1,0 +1,20 @@
+
+service: juanjolescano-getall-integrador
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs12.x
+
+
+functions:
+    listClient:
+      handler: listClient.handler
+      description: 'An API that get all clients'
+      events:
+        - http:
+            path: clients
+            method: GET
+
