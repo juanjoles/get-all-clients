@@ -7,9 +7,7 @@ class listClients extends InputValidation {
             payload: payload,
             source: "CLIENT.LIST",
             specversion:"v1.0.0",
-            schema:{
-                dni:{strict: false}
-            },
+            schema:{strict:false},
         });
     }
 }
