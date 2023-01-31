@@ -3,7 +3,7 @@ const dynamo = require ('ebased/service/storage/dynamo');
 const { ErrorHandled } = require('ebased/util/error');
 const TABLE_NAME = config.get('Clients')
 
-const listClient = async (client) => {
+const listClient = async () => {
     const {Item} = await dynamo.queryTable({
         TableName: TABLE_NAME,
         KeyConditionExpression: 'pk = :dni',
