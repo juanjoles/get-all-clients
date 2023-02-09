@@ -3,5 +3,5 @@ const {listClient} = require('../service/listClients');
 
 module.exports = async () => {
     const getClient = await listClient();
-    return {status: 200, body: getClient};
+    return {status: 200, body: getClient, body1: 'test'};
 };
